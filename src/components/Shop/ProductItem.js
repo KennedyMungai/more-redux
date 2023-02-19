@@ -9,7 +9,13 @@ const ProductItem = (props) =>
 
   const addToCartHandler = () =>
   {
-    dispatch(cartActions.addItemToCart())
+    dispatch(cartActions.addItemToCart(
+      {
+        title: props.title,
+        price: props.price,
+        description: props.description
+      }
+    ))
   }
 
   const { title, price, description } = props;
