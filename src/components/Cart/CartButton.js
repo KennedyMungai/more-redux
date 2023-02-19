@@ -6,6 +6,8 @@ const CartButton = (props) =>
 {
   const dispatch = useDispatch()
 
+  const cartItemsQuantity = useSelector((state) => state.cart.totaQuantity)
+
   const toggleCartHandler = () =>
   {
     dispatch(uiActions.toggle())
@@ -15,7 +17,7 @@ const CartButton = (props) =>
     <button className={classes.button} onClick={toggleCartHandler}>
       <span>My Cart</span>
       <span className={classes.badge}>
-
+        {cartItemsQuantity ?? 0}
       </span>
     </button>
   );
