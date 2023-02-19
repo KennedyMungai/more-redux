@@ -7,18 +7,18 @@ const ProductItem = (props) =>
 {
   const dispatch = useDispatch()
 
+  const { title, price, description } = props
+
   const addToCartHandler = () =>
   {
     dispatch(cartActions.addItemToCart(
       {
-        title: props.title,
-        price: props.price,
-        description: props.description
+        title,
+        price,
+        description
       }
     ))
   }
-
-  const { title, price, description } = props;
 
   return (
     <li className={classes.item}>
