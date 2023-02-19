@@ -8,6 +8,16 @@ const CartItem = (props) =>
 
   const { title, quantity, total, price } = props.item;
 
+  const removeItemHandler = () =>
+  {
+
+  }
+
+  const addItemHandler = () =>
+  {
+
+  }
+
   return (
     <li className={classes.item}>
       <header>
