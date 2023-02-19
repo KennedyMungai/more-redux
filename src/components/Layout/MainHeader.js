@@ -1,18 +1,15 @@
-import { useSelector } from 'react-redux';
 import CartButton from '../Cart/CartButton';
 import classes from './MainHeader.module.css';
 
 const MainHeader = (props) =>
 {
-  const isCartVisible = useSelector((state) => state.ui.cartIsVisible)
-
   return (
     <header className={classes.header}>
       <h1>ReduxCart</h1>
       <nav>
         <ul>
           <li>
-            {isCartVisible && <CartButton />}
+            <CartButton />
           </li>
         </ul>
       </nav>
