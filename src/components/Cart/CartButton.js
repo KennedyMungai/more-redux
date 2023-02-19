@@ -6,7 +6,7 @@ const CartButton = (props) =>
 {
   const dispatch = useDispatch()
 
-  const cartItemsQuantity = useSelector((state) => state.cart.totaQuantity)
+  const cartItemsQuantity = useSelector((state) => state.cart.totalQuantity)
 
   const toggleCartHandler = () =>
   {
