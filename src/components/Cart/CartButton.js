@@ -4,6 +4,8 @@ import classes from './CartButton.module.css';
 
 const CartButton = (props) =>
 {
+  const dispatch = useDispatch()
+
   const toggleCartHandler = () =>
   {
 
