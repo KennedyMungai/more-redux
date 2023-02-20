@@ -18,26 +18,8 @@ function App()
 
   useEffect(() =>
   {
-    const sendCartData = async () => 
-    {
-      dispatch(uiActions.showNotification({
-        status: 'success',
-        title: 'Success!',
-        message: 'Sent cart data successfully'
-      }))
-    }
 
-    if (isInitial)
-    {
-      isInitial = false
-      return
-    }
-
-    sendCartData().catch(error =>
-    {
-
-    })
-  }, [cart, dispatch])
+  }, [])
 
 
   return (
