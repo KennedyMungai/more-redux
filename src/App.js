@@ -34,6 +34,12 @@ function App()
       }
 
       const responseData = await response.json()
+
+      dispatch(uiActions.showNotification({
+        status: 'complete',
+        title: 'Completed',
+        message: 'The data has been sent'
+      }))
     }
   }, [cart])
 
