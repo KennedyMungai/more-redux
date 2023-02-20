@@ -63,15 +63,17 @@ const sendCartData = (cart) =>
             message: 'Sending cart data!'
         }))
 
-
-        const response = await fetch('https://simple-react-backend-default-rtdb.firebaseio.com/cart.json', {
-            method: 'PUT',
-            body: JSON.stringify(cart),
-        })
-
-        if (!response.ok)
+        const sendRequest = async () =>
         {
-            throw new Error("Sending Cart Data failed")
+            const response = await fetch('https://simple-react-backend-default-rtdb.firebaseio.com/cart.json', {
+                method: 'PUT',
+                body: JSON.stringify(cart),
+            })
+
+            if (!response.ok)
+            {
+                throw new Error("Sending Cart Data failed")
+            }
         }
 
         dispatch(uiActions.showNotification({
