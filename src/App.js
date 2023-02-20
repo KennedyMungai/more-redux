@@ -46,6 +46,7 @@ function App()
 
     if (isInitial)
     {
+      isInitial = false
       return
     }
 
