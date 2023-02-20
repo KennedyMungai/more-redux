@@ -76,6 +76,8 @@ const sendCartData = (cart) =>
             }
         }
 
+        await sendRequest()
+
         dispatch(uiActions.showNotification({
             status: 'success',
             title: 'Success!',
