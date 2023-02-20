@@ -48,7 +48,7 @@ function App()
         message: 'Sending cart data failed'
       }))
     })
-  }, [cart])
+  }, [cart, dispatch])
 
 
   return (
