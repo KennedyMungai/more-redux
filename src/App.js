@@ -30,7 +30,11 @@ function App()
 
       if (!response.ok)
       {
-        throw new Error("Sending Cart Data failed")
+        dispatch(uiActions.showNotification({
+          status: '',
+          title: '',
+          message: ''
+        }))
       }
 
       dispatch(uiActions.showNotification({
