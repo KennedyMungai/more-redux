@@ -74,6 +74,11 @@ const sendCartData = (cart) =>
             throw new Error("Sending Cart Data failed")
         }
 
+        dispatch(uiActions.showNotification({
+            status: 'success',
+            title: 'Success!',
+            message: 'Sending cart data successfully!'
+        }))
     }
 }
 
