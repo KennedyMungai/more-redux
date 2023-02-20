@@ -13,10 +13,10 @@ function App()
   {
     const sendCartData = async () => 
     {
-      fetch('https://simple-react-backend-default-rtdb.firebaseio.com/cart.json', {
+      const response = await fetch('https://simple-react-backend-default-rtdb.firebaseio.com/cart.json', {
         method: 'PUT',
         body: JSON.stringify(cart),
-      }).then()
+      })
     }
   }, [cart])
 
