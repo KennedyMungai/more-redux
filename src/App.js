@@ -35,11 +35,7 @@ function App()
 
     sendCartData().catch(error =>
     {
-      dispatch(uiActions.showNotification({
-        status: 'error',
-        title: 'Error!',
-        message: 'Sending cart data failed'
-      }))
+
     })
   }, [cart, dispatch])
 
