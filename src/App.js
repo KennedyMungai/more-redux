@@ -6,6 +6,8 @@ import Products from './components/Shop/Products';
 
 function App()
 {
+  const dispatch = useDispatch()
+
   const isCartVisible = useSelector(state => state.ui.cartIsVisible)
   const cart = useSelector((state) => state.cart)
 
