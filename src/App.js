@@ -11,6 +11,7 @@ function App()
 
   const isCartVisible = useSelector(state => state.ui.cartIsVisible)
   const cart = useSelector((state) => state.cart)
+  const notification = useSelector((state) => state.notification)
 
   useEffect(() =>
   {
