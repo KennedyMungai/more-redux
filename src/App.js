@@ -24,7 +24,7 @@ function App()
       return
     }
 
-    dispatch()
+    dispatch(sendCartData(cart))
   }, [])
 
 
