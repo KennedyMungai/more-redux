@@ -7,7 +7,12 @@ const ProductItem = (props) =>
 {
   const dispatch = useDispatch()
 
-  const { id, title, price, description } = props
+  const {
+    id,
+    title,
+    price,
+    description
+  } = props
 
   const addToCartHandler = () =>
   {
