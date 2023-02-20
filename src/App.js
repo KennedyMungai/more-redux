@@ -17,7 +17,10 @@ function App()
 
   useEffect(() =>
   {
-
+    if (isInitial)
+    {
+      return
+    }
   }, [])
 
 
