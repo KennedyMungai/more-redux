@@ -44,6 +44,11 @@ function App()
       }))
     }
 
+    if (isInitial)
+    {
+      return
+    }
+
     sendCartData().catch(error =>
     {
       dispatch(uiActions.showNotification({
