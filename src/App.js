@@ -11,10 +11,13 @@ function App()
 
   useEffect(() =>
   {
-    fetch('https://simple-react-backend-default-rtdb.firebaseio.com/cart.json', {
-      method: 'PUT',
-      body: JSON.stringify(cart),
-    })
+    const sendCartData = async () => 
+    {
+      fetch('https://simple-react-backend-default-rtdb.firebaseio.com/cart.json', {
+        method: 'PUT',
+        body: JSON.stringify(cart),
+      }).then()
+    }
   }, [cart])
 
 
