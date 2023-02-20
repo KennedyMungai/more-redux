@@ -54,10 +54,13 @@ function App()
 
 
   return (
-    <Layout>
-      {isCartVisible && <Cart />}
-      <Products />
-    </Layout>
+    <>
+      {notification && <Notification />}
+      <Layout>
+        {isCartVisible && <Cart />}
+        <Products />
+      </Layout>
+    </>
   );
 }
 
