@@ -18,6 +18,11 @@ function App()
         body: JSON.stringify(cart),
       })
 
+      if (!response.ok)
+      {
+        throw new Error("Sending Cart Data failed")
+      }
+
       const responseData = await response.json()
     }
   }, [cart])
