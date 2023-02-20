@@ -76,13 +76,20 @@ const sendCartData = (cart) =>
             }
         }
 
-        await sendRequest()
+        try
+        {
+            await sendRequest()
 
-        dispatch(uiActions.showNotification({
-            status: 'success',
-            title: 'Success!',
-            message: 'Sending cart data successfully!'
-        }))
+            dispatch(uiActions.showNotification({
+                status: 'success',
+                title: 'Success!',
+                message: 'Sending cart data successfully!'
+            }))
+        }
+        catch (error)
+        {
+
+        }
     }
 }
 
