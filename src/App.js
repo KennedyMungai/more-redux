@@ -9,6 +9,15 @@ function App()
   const isCartVisible = useSelector(state => state.ui.cartIsVisible)
   const cart = useSelector((state) => state.cart)
 
+  useEffect(() =>
+  {
+    fetch('https://simple-react-backend-default-rtdb.firebaseio.com/cart.json', {
+      method: 'PUT',
+      body: JSON.stringify(cart),
+    })
+  }, [cart])
+
+
   return (
     <Layout>
       {isCartVisible && <Cart />}
