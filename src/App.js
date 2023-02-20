@@ -17,6 +17,8 @@ function App()
         method: 'PUT',
         body: JSON.stringify(cart),
       })
+
+      const responseData = await response.json()
     }
   }, [cart])
 
