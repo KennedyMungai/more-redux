@@ -58,9 +58,9 @@ const sendCartData = (cart) =>
     return async (dispatch) => 
     {
         dispatch(uiActions.showNotification({
-            status: 'error',
-            title: 'Error!',
-            message: 'Sending cart data failed'
+            status: 'pending',
+            title: 'Sending',
+            message: 'Sending cart data!'
         }))
 
 
