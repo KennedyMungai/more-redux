@@ -31,9 +31,9 @@ function App()
       if (!response.ok)
       {
         dispatch(uiActions.showNotification({
-          status: '',
-          title: '',
-          message: ''
+          status: 'error',
+          title: 'Error!',
+          message: 'Sending cart data failed'
         }))
       }
 
