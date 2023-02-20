@@ -34,9 +34,9 @@ function App()
       }
 
       dispatch(uiActions.showNotification({
-        status: 'complete',
-        title: 'Completed',
-        message: 'The data has been sent'
+        status: 'success',
+        title: 'Success!',
+        message: 'Sent cart data successfully'
       }))
     }
   }, [cart])
