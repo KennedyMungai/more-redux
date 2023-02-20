@@ -18,6 +18,7 @@ const cartSlice = createSlice({
             const newItem = action.payload
             const existingItem = state.items.find(item => item.id === newItem.id)
             state.totalQuantity++
+            state.changed = true
 
             if (!existingItem)
             {
@@ -44,6 +45,7 @@ const cartSlice = createSlice({
             const existingItem = state.items.find((item) => item.id === id)
 
             state.totalQuantity--
+            state.changed = true
 
             if (existingItem.quantity === 1)
             {
