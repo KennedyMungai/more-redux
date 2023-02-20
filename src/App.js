@@ -33,8 +33,6 @@ function App()
         throw new Error("Sending Cart Data failed")
       }
 
-      const responseData = await response.json()
-
       dispatch(uiActions.showNotification({
         status: 'complete',
         title: 'Completed',
